@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LEANVEST</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: 'Arial', sans-serif;
+            color: white;
+            overflow: hidden;
+        }
+
+        /* Background image with proper pathing */
+        .background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('cheetah-chase.jpg'); /* Ensure this path is correct */
+            background-size: cover;
+            background-position: 0% 0%;
+            z-index: -1;
+            animation: zoomInOut 30s ease-in-out infinite;
+        }
+
+        /* Background image zoom effect */
+        @keyframes zoomInOut {
+            0%, 100% {
+                transform: scale(1.05);
+            }
+            50% {
+                transform: scale(1.5);
+            }
+        }
+
+        /* Main content styling */
+        .content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            text-align: center;
+            padding: 20px;
+            z-index: 1;
+        }
+
+        /* Sky blue shine-through effect for Leanvest */
+        .content h1 {
+            font-size: 4em;
+            margin: 0;
+            text-transform: uppercase;
+            font-weight: bold;
+            background: linear-gradient(90deg, #fff, #00BFFF, #fff); /* Sky blue gradient */
+            background-size: 200%;
+            -webkit-background-clip: text;
+            color: transparent;
+            animation: shine 5s infinite linear;
+        }
+
+        @keyframes shine {
+            0% {
+                background-position: 0%;
+            }
+            100% {
+                background-position: 200%;
+            }
+        }
+
+        /* Motto appearance sequence */
+        .content h2 {
+            font-size: 1.8em;
+            margin-top: 20px;
+            display: inline-block;
+        }
+
+        /* Animate individual words of the motto */
+        .word {
+            opacity: 0;
+            display: inline-block;
+        }
+
+        .word:nth-child(1) {
+            animation: appear 60s infinite;
+            animation-delay: 0s;
+        }
+
+        .word:nth-child(2) {
+            animation: appear 60s infinite;
+            animation-delay: 5s;
+        }
+
+        .word:nth-child(3) {
+            animation: appear 60s infinite;
+            animation-delay: 10s;
+        }
+
+        @keyframes appear {
+            0%, 5% { opacity: 0; }
+            10%, 70% { opacity: 1; }
+            75%, 80% { opacity: 0; }
+            80%, 100% { opacity: 0; }
+        }
+
+        /* Typing effect for both sentences */
+        .typewriter-text {
+            display: inline-block;
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: 2px solid white;
+            opacity: 1;
+            animation: blink 1s step-end infinite;
+            font-size: 1.5em; /* Adjust font size for better visibility */
+            max-width: 100%; /* Increase max-width to allow more space */
+            visibility: visible; /* Ensure visibility */
+            padding: 0 20px; /* Optional padding for better spacing */
+        }
+
+        @keyframes blink {
+            50% { border-color: transparent; }
+        }
+
+        /* Horizontal floating effect for services lines */
+        .services {
+            margin-top: 40px;
+            opacity: 0; /* Initially hidden for fade-in effect */
+            animation: fadeIn 5s forwards; /* Fade-in effect */
+            animation-delay: 25s; /* Delay for 30 seconds */
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .services ul {
+            list-style-type: none;
+            padding-left: 0;
+            line-height: 1.8em;
+        }
+
+        .services li {
+            font-size: 1.2em;
+            margin: 5px 0;
+            position: relative;
+            display: inline-block; /* Ensure the elements stay on the same line */
+            vertical-align: middle;
+        }
+
+        /* Individual floating effects for each element */
+        .left-element-1 {
+            animation: floating-left-1 15s ease-in-out infinite; /* Speed: 12s */
+        }
+
+        .right-element-1 {
+            animation: floating-right-1 12s ease-in-out infinite; /* Speed: 17s */
+        }
+
+        .left-element-2 {
+            animation: floating-left-2 18s ease-in-out infinite; /* Speed: 18s */
+        }
+
+        .right-element-2 {
+            animation: floating-right-2 10s ease-in-out infinite; /* Speed: 20s */
+        }
+
+        .left-element-3 {
+            animation: floating-left-3 20s ease-in-out infinite; /* Speed: 20s */
+        }
+
+        .right-element-3 {
+            animation: floating-right-3 14s ease-in-out infinite; /* Speed: 15s */
+        }
+
+        /* Keyframes for individual floating effects */
+        @keyframes floating-left-1 {
+            0% { transform: translateX(-125%); }
+            50% { transform: translateX(0%); }
+            100% { transform: translateX(-125%); }
+        }
+
+        @keyframes floating-right-1 {
+            0% { transform: translateX(45%); }
+            50% { transform: translateX(0%); }
+            100% { transform: translateX(45%); }
+        }
+
+        @keyframes floating-left-2 {
+            0% { transform: translateX(-70%); }
+            50% { transform: translateX(0%); }
+            100% { transform: translateX(-70%); }
+        }
+
+        @keyframes floating-right-2 {
+            0% { transform: translateX(45%); }
+            50% { transform: translateX(0%); }
+            100% { transform: translateX(45%); }
+        }
+
+        @keyframes floating-left-3 {
+            0% { transform: translateX(-80%); }
+            50% { transform: translateX(0%); }
+            100% { transform: translateX(-80%); }
+        }
+
+        @keyframes floating-right-3 {
+            0% { transform: translateX(60%); }
+            50% { transform: translateX(0%); }
+            100% { transform: translateX(60%); }
+        }
+
+        /* CTA Button */
+        .cta-button {
+            margin-top: 40px;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            background-color: #FF6347;
+            border: none;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .cta-button:hover {
+            background-color: #ff4500;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Background Image -->
+    <div class="background"></div>
+
+    <!-- Main Content -->
+    <div class="content">
+        <h1>Leanvest</h1>
+        
+        <h2>
+            <span class="word">Hunter</span>
+            <span class="word">or the hunted</span>
+            <span class="word">– the leanest survive</span>
+        </h2>
+        
+        <div class="typewriter-text" id="typewriter"></div>
+
+        <div class="services">
+            <h3 style="margin-bottom: 0;"><u>Lean Investment Soluions</u></h3>
+            <ul>
+                <li class="left-element-1"><strong>AI/ML-powered Solutions</strong></li>
+                <li class="right-element-1">Pre-built and custom-built AI/ML models of virtual investment analysts</li>
+            </ul>
+            <ul>
+                <li class="left-element-2"><strong>Blockchain-powered Solutions</strong></li> <!-- Ensure Blockchain is in its own line -->
+                <li class="right-element-2">Enabling UCITS and other regulated funds through smart contracts</li>
+            </ul>
+
+            <h3 style="margin-bottom: 0;"><u>Lean HPC Solutions</u></h3>
+            <ul>
+                <li class="left-element-3"><strong>Energy-efficient HPC Solutions</strong></li> 
+                <li class="right-element-3">Alternative and Renewable Energy, Immersion Cooling</li> <!-- Ensure ABC has the same speed -->
+            </ul>
+        </div>
+
+<a href="mailto:info@leanvest.co.uk?subject=Discover More" class="cta-button">Discover More</a>
+
+    </div>
+
+    <script>
+        const sentences = [
+            "We enable transparent, decentralised and efficient investment solutions through software.",
+            "We enable eco-friendly, socially responsible, and energy-efficient computing through cutting-edge technologies."
+        ];
+
+        const typewriter = document.getElementById("typewriter");
+        let currentSentence = 0;
+        let charIndex = 0;
+
+        function type() {
+            if (charIndex < sentences[currentSentence].length) {
+                typewriter.textContent += sentences[currentSentence].charAt(charIndex);
+                charIndex++;
+                setTimeout(type, 50); // Adjust typing speed here
+            } else {
+                setTimeout(deleteText, 1000); // Wait for a second before starting to delete
+            }
+        }
+
+        function deleteText() {
+            if (charIndex > 0) {
+                typewriter.textContent = sentences[currentSentence].substring(0, charIndex - 1);
+                charIndex--;
+                setTimeout(deleteText, 50); // Adjust deletion speed here
+            } else {
+                currentSentence = (currentSentence + 1) % sentences.length; // Switch to the next sentence
+                setTimeout(type, 1000); // Wait a second before starting to type the next sentence
+            }
+        }
+
+        // Start typing after an initial delay of 20 seconds
+        setTimeout(() => {
+            type(); // Start the typing effect
+        }, 20000);
+    </script>
+</body>
+</html>
