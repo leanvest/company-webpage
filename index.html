@@ -42,13 +42,19 @@
         .content {
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: flex-start;
             align-items: center;
             height: 100%;
             text-align: center;
             padding: 20px;
             z-index: 1;
         }
+
+		/* Logo styling */
+				.logo {
+					max-width: 200px;
+					margin-bottom: 0px; /* Space between logo and LEANVEST */
+				}
 
         /* Sky blue shine-through effect for Leanvest */
         .content h1 {
@@ -242,33 +248,37 @@
 
     <!-- Main Content -->
     <div class="content">
-        <h1>Leanvest</h1>
-        
-        <h2>
-            <span class="word">Hunter</span>
-            <span class="word">or the hunted</span>
-            <span class="word">– the leanest survive</span>
-        </h2>
-        
-        <div class="typewriter-text" id="typewriter"></div>
+		<!-- Logo -->
+			<img src="LeanvestLogo.png" alt="Leanvest Logo" class="logo">
 
-        <div class="services">
-            <h3 style="margin-bottom: 0;"><u>Lean Investment Solutions</u></h3>
-            <ul>
-                <li class="left-element-1"><strong>AI/ML-powered Solutions</strong></li>
-                <li class="right-element-1">Pre-built and custom-built AI/ML models of virtual investment analysts</li>
-            </ul>
-            <ul>
-                <li class="left-element-2"><strong>Blockchain-powered Solutions</strong></li> <!-- Ensure Blockchain is in its own line -->
-                <li class="right-element-2">Enabling UCITS and other regulated funds through smart contracts</li>
-            </ul>
+		<!-- Leanvest Title -->        
+			<h1>Leanvest</h1>
 
-            <h3 style="margin-bottom: 0;"><u>Lean HPC Solutions</u></h3>
-            <ul>
-                <li class="left-element-3"><strong>Energy-efficient HPC Solutions</strong></li> 
-                <li class="right-element-3">Alternative and Renewable Energy, Immersion Cooling</li> <!-- Ensure ABC has the same speed -->
-            </ul>
-        </div>
+			<h2>
+				<span class="word">Hunter</span>
+				<span class="word">or the hunted</span>
+				<span class="word">– the leanest survive</span>
+			</h2>
+			
+			<div class="typewriter-text" id="typewriter"></div>
+
+			<div class="services">
+				<h3 style="margin-bottom: 0;"><u>Lean Investment Solutions</u></h3>
+				<ul>
+					<li class="left-element-1"><strong>AI/ML-powered Solutions</strong></li>
+					<li class="right-element-1">Pre-built and custom-built AI/ML models of virtual investment analysts</li>
+				</ul>
+				<ul>
+					<li class="left-element-2"><strong>Blockchain-powered Solutions</strong></li> <!-- Ensure Blockchain is in its own line -->
+					<li class="right-element-2">Enabling UCITS and other regulated funds through smart contracts</li>
+				</ul>
+
+				<h3 style="margin-bottom: 0;"><u>Lean HPC Solutions</u></h3>
+				<ul>
+					<li class="left-element-3"><strong>Energy-efficient HPC Solutions</strong></li> 
+					<li class="right-element-3">Alternative and Renewable Energy, Immersion Cooling</li> <!-- Ensure ABC has the same speed -->
+				</ul>
+			</div>
 
 <a href="mailto:info@leanvest.co.uk?subject=Discover More" class="cta-button">Discover More</a>
 
